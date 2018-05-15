@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: netflix-eureka-client-service-provider
+eureka:
+  instance:
+    appname: netflix-eureka-client-service-provider
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+server:
+  port: 9001

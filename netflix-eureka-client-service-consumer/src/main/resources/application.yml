@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: netflix-eureka-client-service-consumer
+  aop:
+    proxy-target-class: true
+eureka:
+  instance:
+    appname: netflix-eureka-client-service-consumer
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+server:
+  port: 8001
