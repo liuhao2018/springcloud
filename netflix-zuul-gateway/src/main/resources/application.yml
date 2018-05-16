@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: netflix-zuul-gateway
+eureka:
+  instance:
+    appname: netflix-zuul-gateway
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+
+server:
+  port: 5000
+
+zuul:
+  routes:
+    api-a:
+      path: /api-a/**
+      serviceId: netflix-eureka-client-service-consumer
+
+
+
+
+
+
+
+
+
+
+
