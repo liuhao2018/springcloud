@@ -16,11 +16,6 @@ public class HiController {
 
     @GetMapping("/hi")
     public String hi() {
-        try {
-            return hiService.hi();
-        } catch (URISyntaxException e) {
-            e.printStackTrace();
-            return "";
-        }
+        return hiService.hi();
     }
 }

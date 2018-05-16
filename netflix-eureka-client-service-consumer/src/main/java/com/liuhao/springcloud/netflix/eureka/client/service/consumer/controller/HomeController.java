@@ -6,8 +6,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.net.URISyntaxException;
-
 @RequestMapping("/home")
 @RestController
 public class HomeController {
@@ -17,12 +15,7 @@ public class HomeController {
 
     @GetMapping("/hi")
     public String hi() {
-        try {
-            return homeService.hi();
-        } catch (URISyntaxException e) {
-            e.printStackTrace();
-            return "";
-        }
+        return homeService.hi();
     }
 
 }

@@ -7,14 +7,16 @@ eureka:
   client:
     fetch-registry: true
     register-with-eureka: true
+    serviceUrl:
+          defaultZone: http://127.0.0.1:8761/eureka/
 
 server:
   port: 5000
 
 zuul:
   routes:
-    api-a:
-      path: /api-a/**
+    web:
+      path: /web/**
       serviceId: netflix-eureka-client-service-consumer
 
 

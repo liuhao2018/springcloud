@@ -3,12 +3,16 @@ server:
 
 eureka:
   instance:
-    hostname: localhost
+    appname: netflix-eureka-server
   client:
-    registerWithEureka: false
-    fetchRegistry: false
+    registerWithEureka: true
+    fetchRegistry: true
     serviceUrl:
-      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+      defaultZone: http://127.0.0.1:8762/eureka/
+spring:
+  application:
+    name: netflix-eureka-server
+
 
 
 
