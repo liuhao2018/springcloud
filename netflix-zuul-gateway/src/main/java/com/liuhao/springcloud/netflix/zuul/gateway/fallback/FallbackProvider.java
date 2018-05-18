@@ -34,12 +34,12 @@ public class FallbackProvider implements org.springframework.cloud.netflix.zuul.
 
             @Override
             public int getRawStatusCode() throws IOException {
-                return 200;
+                return this.getStatusCode().value();
             }
 
             @Override
             public String getStatusText() throws IOException {
-                return "success";
+                return this.getStatusCode().getReasonPhrase();
             }
 
             @Override

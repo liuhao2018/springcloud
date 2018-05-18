@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: netflix-zuul-gateway
+eureka:
+  instance:
+    appname: netflix-zuul-gateway
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+
+    serviceUrl:
+      defaultZone: http://127.0.0.1:8761/eureka/
+server:
+  port: 4000
+zuul:
+  routes:
+    api:
+      path: /api/**
+      serviceId: netflix-eureka-client-service-consumer
+

@@ -2,7 +2,6 @@ package com.liuhao.springcloud.netflix.eureka.client.service.consumer.service;
 
 import com.liuhao.springcloud.api.service.HiService;
 import com.liuhao.springcloud.netflix.eureka.client.service.consumer.feign.FeignClient;
-import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.stereotype.Service;
