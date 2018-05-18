@@ -14,6 +14,7 @@ import org.springframework.web.client.RestTemplate;
 /**
  * 客户端 消费方
  */
+@EnableFeignClients
 @EnableHystrix
 @EnableDiscoveryClient
 @EnableEurekaClient

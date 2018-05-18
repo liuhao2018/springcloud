@@ -15,17 +15,6 @@ server:
 
 zuul:
   routes:
-    web:
-      path: /web/**
+    api:
+      path: /api/**
       serviceId: netflix-eureka-client-service-consumer
-
-
-
-
-
-
-
-
-
-
-

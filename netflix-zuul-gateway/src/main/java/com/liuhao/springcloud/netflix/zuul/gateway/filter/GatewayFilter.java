@@ -1,7 +1,7 @@
 package com.liuhao.springcloud.netflix.zuul.gateway.filter;
 
 import com.google.gson.Gson;
-import com.liuhao.springcloud.netflix.zuul.gateway.model.Authorization;
+import com.liuhao.springcloud.netflix.zuul.gateway.model.ApiResponse;
 import com.netflix.zuul.ZuulFilter;
 import com.netflix.zuul.context.RequestContext;
 import com.netflix.zuul.exception.ZuulException;
@@ -42,7 +42,7 @@ public class GatewayFilter extends ZuulFilter {
             try {
                 context.getResponse().setContentType("application/json");
                 context.getResponse().setCharacterEncoding("utf-8");
-                context.getResponse().getWriter().write(gson.toJson(new Authorization(1001,"无访问权限")));
+                context.getResponse().getWriter().write(gson.toJson(new ApiResponse(1001,"用户无访问权限")));
             } catch (IOException e) {
                 e.printStackTrace();
             }
