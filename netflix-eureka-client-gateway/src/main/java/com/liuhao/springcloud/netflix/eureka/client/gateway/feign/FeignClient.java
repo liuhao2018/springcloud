@@ -5,7 +5,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Component
-@org.springframework.cloud.openfeign.FeignClient(value = "netflix-zuul-gateway")
+@org.springframework.cloud.openfeign.FeignClient(value = "netflix-zuul-gateway",
+    fallback = FallbackFeignClient.class)
 public interface FeignClient {
     @RequestMapping(value = "/{requestUri}")
     String main(@PathVariable("requestUri") String requestUri);

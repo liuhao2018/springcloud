@@ -39,9 +39,9 @@ public class HomeService implements HiService {
      * 失败处理
      * @return
      */
-    public String defaultResponse() {
-        return "welcome";
-    }
+//    public String defaultResponse() {
+//        return "welcome";
+//    }
 
 
     @Override

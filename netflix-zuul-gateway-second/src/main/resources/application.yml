@@ -11,7 +11,7 @@ eureka:
     serviceUrl:
       defaultZone: http://127.0.0.1:8761/eureka/
 server:
-  port: 4000
+  port: 5001
 zuul:
   routes:
     api:

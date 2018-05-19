@@ -8,7 +8,7 @@ import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
 import org.springframework.context.annotation.Bean;
 
 /**
- * 116.62.65.128
+ *
  */
 @EnableZuulProxy
 @EnableEurekaClient
